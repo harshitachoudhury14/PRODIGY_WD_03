@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0d0d0d;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+    color: #fff;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(45deg, #ff006e, #ffbe0b);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#turnIndicator {
+    margin: 10px 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    background: linear-gradient(45deg, #3a3a3a, #5a5a5a);
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cell:hover {
+    background: linear-gradient(45deg, #ff006e, #ffbe0b);
+}
+
+.cell.X::before {
+    content: 'X';
+    color: #ff006e;
+}
+
+.cell.O::before {
+    content: 'O';
+    color: #00e0ff;
+}
